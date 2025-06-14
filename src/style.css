@@ -1,0 +1,73 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Poppins";
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 1200px;
+}
+
+.container {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeIN 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIN {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container h1 {
+  font-size: 8em;
+  font-weight: normal;
+  position: relative;
+  margin-top: 0;
+}
+
+.container h1::before {
+  position: absolute;
+  content: '"';
+  font-family: "Inter";
+  color: rgba(0, 0, 0, 0.075);
+  font-size: 3.5em;
+  margin: 0;
+  top: -0.35em;
+  left: -0.15em;
+}
+
+.container button {
+  border: none;
+  background: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container button span {
+  font-size: 2em;
+}
+
+.container button img {
+  height: 1.6em;
+  width: 1.6em;
+  transition: 0.5s;
+}
+
+.container button:hover {
+  text-decoration: underline;
+}
+
+.container button:hover img {
+  transform: translateX(10px);
+}
