@@ -52,7 +52,7 @@ const Testimonials = () => {
 
     return (
         <div className="container">
-            <h1>{testimonials[index].comment} <span>-{testimonials[index].name}</span></h1>
+            <h1>{testimonials[index].comment} <br /> <span>- {testimonials[index].name}</span></h1>
             <button onClick={() => setIndex(currentIndex => (currentIndex + 1)%testimonials.length)}>
                 <span>Next</span>
                 <img src={arrow} alt="svg" />
